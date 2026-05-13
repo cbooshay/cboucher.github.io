@@ -1,0 +1,30 @@
+% preamble
+
+\input{preamble}
+
+% document
+
+\begin{document}
+
+\section*{$E$ is Irrational \begin{small} \begin{color}{gray} \\
+(May 13, 2026) \end{color} \end{small}}
+
+If the number $e$ is defined to be the sum of the series $\ds \sum_{n=0}^{\infty} \frac{1}{n!}$, then the error in approximating $e$ by the partial sum $\ds 1+1+1/2+\cdots+1/n!$ is 
+\begin{align*}
+ 0 &< e - \lp 1 + \frac{1}{1!} + \cdots + \frac{1}{n!} \rp \\
+ &= \frac{1}{(n+1)!} + \frac{1}{(n+2)!} + \cdots \\
+ &= \frac{1}{(n+1)!} \lp 1 + \frac{1}{n+2} + \frac{1}{(n+2)(n+3)} + \cdots \rp \\
+&\leq \frac{1}{(n+1)!}  \sum_{k=0}^{\infty} \lp \frac{1}{n+2} \rp^k \\
+&= \frac{n+2}{(n+1)!(n+1)}
+\end{align*}
+The series converges quickly. Also, if $\ds e = a/b$ for positive integers $a$ and $b$, then the number 
+\[
+  x = b! \lp e - \lp 1 + \frac{1}{1!} + \cdots + \frac{1}{b!} \rp\rp
+\] 
+is an integer, and
+\[
+  0< x \leq \frac{b!(b+2)}{(b+1)!(b+1)} = \frac{b+2}{(b+1)^2} <1
+\]
+which is a contradiction.
+
+\end{document}
